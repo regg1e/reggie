@@ -1,0 +1,108 @@
+/* 公共样式 */
+
+
+/*公共样式*/
+
+
+/*1.样式重置*/
+
+html,
+body,
+ul,
+li,
+img,
+a,
+p,
+div,
+form,
+input,
+h2,
+h3,
+h5,
+h6,
+h4 {
+    padding: 0;
+    margin: 0;
+    /*设置盒模型*/
+    box-sizing: border-box;
+    /*去除移动端特有的点击高亮效果*/
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: "微软雅黑", sans-serif;
+    font-size: 13px;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+a,
+a:hover {
+    color: #666;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+input,img{
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    outline-style: none;
+    vertical-align: bottom; 
+}
+
+
+/*2.添加新的样式*/
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0px;
+    clear: both;
+    visibility: hidden;
+}
+
+/*placholder 修改颜色*/
+input::-webkit-input-placeholder{  color:#ccc; font-size:14px; }
+        input:-moz-placeholder{  color:#ccc; font-size:14px;}
+        input::-moz-placeholder{  color:#ccc;font-size:14px; }
+        input:-ms-input-placeholder{  color:#ccc; font-size:14px; }
+
+textarea{
+    /* 边框清零 */
+    border:none;
+    /* 轮廓线清零 */
+    outline: none;
+    /* 防止文本域被随意拖拽 */
+    resize: none;
+}
+ 
+i{
+    /*文字样式*/
+    font-style: normal; 
+}
+ 
+table{
+    /*边框合并*/
+    border-collapse:collapse;
+    border-spacing:0;
+}
