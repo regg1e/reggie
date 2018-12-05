@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./md5.js"></script>
+  <script src="./sha1.js"></script>
+  <script src="./base64.js"></script>
+</head>
+<body>
+  
+</body>
+<script> 
+// md5
+var hashHex = hex_md5("123dafd"); // 返回16进制的加密结果
+var hashBase64 = b64_md5("123dafd"); // 返回 base64的加密结果
+var hashStr = str_md5("123dafd");  // 返回字符串的哈希结果
+
+console.group('md5')
+console.log('hashHex:'+hashHex)
+console.log('hashBase64:'+hashBase64)
+console.log('hashStr:'+hashStr)
+console.groupEnd()
+
+// sha1
+var shaHex = hex_sha1("123465");
+var shaBase64 = b64_sha1('123465');
+var shaStr = str_sha1('123465');
+console.group('sha1')
+console.log('shaHex:'+shaHex)
+console.log('shaBase64:'+shaBase64)
+console.log('shaStr:'+shaStr)
+console.groupEnd()
+
+
+// base64(可逆加密)
+console.group('base64')
+var str = base64encode('123456');
+console.log('base64 encode:' + str); //解密
+str = base64decode(str);
+console.log('base64 decode:' + str);
+console.groupEnd()
+</script>
+</html>
